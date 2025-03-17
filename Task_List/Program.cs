@@ -62,10 +62,25 @@
                         //    اضافة رقم    // <<<<<<<<<<
                         case "A":
                             char askAddNumber;
+                            bool repeatNumber = true; //منع تكرار الارقام
                             do
                             {
                                 Console.Write("Enter Numper : ");
                                 int num = Convert.ToInt32(Console.ReadLine());
+                                 for (int i = 0; i < numbers.Count; i++)  //اضافة منع التكرار
+                                 {
+                                      if (numbers[i] == num )
+                                         {
+                                           Console.WriteLine("\n>>> The number exists. Enter another number. <<<\n");
+                                           repeatNumber = false;
+                                           break;
+                                         }                  
+                                 }
+                                
+                                 if (repeatNumber == false)
+                                 {
+                                       break;
+                                 }
                                 
                                 numbers.Add(num);
                                 Console.WriteLine($"\n\n>>> Number Is Add {numbers[^1]} <<<\n");
