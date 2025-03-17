@@ -23,7 +23,7 @@
                 Console.WriteLine("|     L - Display the largest number   |");
                 Console.WriteLine("|     F - Find a number                |");
                 Console.WriteLine("|     W - Swap                         |");
-                Console.WriteLine("|     C - Clear list,                  |");
+                Console.WriteLine("|     C - Clear list                   |");
                 Console.WriteLine("|     Q - Quit                         |");
                 Console.WriteLine("========================================\n");
 
