@@ -259,7 +259,7 @@
                         //    تنظيف القائمه    // <<<<<<<<<<
                         case "C":
                             numbers.Clear();
-                            Console.WriteLine("\n\n>>> make it empty again <<<\n");
+                            Console.WriteLine("\n\n>>> The list has been emptied <<<\n");
                             break;
                         #endregion
 
