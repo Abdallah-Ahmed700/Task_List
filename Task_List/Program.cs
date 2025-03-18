@@ -23,6 +23,7 @@
                 Console.WriteLine("|     L - Display the largest number   |");
                 Console.WriteLine("|     F - Find a number                |");
                 Console.WriteLine("|     W - Swap                         |");
+                Console.WriteLine("|     R - Sorting                      |");
                 Console.WriteLine("|     C - Clear list                   |");
                 Console.WriteLine("|     Q - Quit                         |");
                 Console.WriteLine("========================================\n");
@@ -253,6 +254,109 @@
                             break;
 
                         #endregion
+
+
+                            #region Sorting
+case "R":
+    Console.Write("\n\nChoose ascending or descending order (A-ASC / D-DESC) : ");
+    string str = Console.ReadLine().ToUpper();
+    if (str.Length == 1)
+    {
+        switch (str)
+        {
+            case "A":
+                //الطباعه قبل الترتيب
+                Console.Write("\n\n>>> Before [");
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    Console.Write($" {numbers[i]} ");
+                }
+                Console.Write("] <<<\n\n");
+
+
+
+                //عملية الترتيب
+                for (int p = 0; p < numbers.Count - 1; p++)
+                {
+                    for (int i = 0; i < numbers.Count - 1; i++)
+                    {
+                        if (numbers[i] > numbers[i + 1])
+                        {
+                            int sort = numbers[i];
+                            numbers[i] = numbers[i + 1];
+                            numbers[i + 1] = sort;
+                        }
+
+                    }
+                }
+
+
+
+                //الطباعه بعد الترتيب
+                Console.Write("\n\n>>> After  [");
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    Console.Write($" {numbers[i]} ");
+                }
+                Console.Write("] <<<\n\n");
+
+
+                break;
+
+
+            case "D":
+                //الطباعه قبل الترتيب
+                Console.Write("\n\n>>> Before [");
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    Console.Write($" {numbers[i]} ");
+                }
+                Console.Write("] <<<\n\n");
+
+
+
+                //عملية الترتيب
+                for (int p = 0; p < numbers.Count - 1; p++)
+                {
+                    for (int i = 0; i < numbers.Count - 1; i++)
+                    {
+                        if (numbers[i] < numbers[i + 1])
+                        {
+                            int sort = numbers[i];
+                            numbers[i] = numbers[i + 1];
+                            numbers[i + 1] = sort;
+                        }
+
+                    }
+                }
+
+
+
+                //الطباعه بعد الترتيب
+                Console.Write("\n\n>>> After  [");
+                for (int i = 0; i < numbers.Count; i++)
+                {
+                    Console.Write($" {numbers[i]} ");
+                }
+                Console.Write("] <<<\n\n");
+
+
+            break;
+
+            default:
+                Console.WriteLine("\n>>> This option is not in the list. <<<\n");
+                break;
+        }
+                     
+        
+    }
+    else
+    {
+        Console.WriteLine("Enter one letter");
+    }
+
+    break;
+#endregion
 
 
                         #region Clear list
