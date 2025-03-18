@@ -4,6 +4,12 @@
     {
         static void Main(string[] args)
         {
+
+                    //Done
+            //- Don't allow duplicate entries
+            //- Sorting ASC / DESC
+            //- SWAP
+            
             Console.Title = "list the numbers";
             Console.ForegroundColor = ConsoleColor.Green;
 
@@ -265,7 +271,7 @@ case "R":
  }
  else
  {
-    Console.Write("\n\nChoose ascending or descending order (A-ASC / D-DESC) : ");
+    Console.Write("\n\nChoose ascending or descending order (A- ASC / D- DESC) : ");
     string str = Console.ReadLine().ToUpper();
     if (str.Length == 1)
     {
@@ -376,7 +382,7 @@ case "R":
 
 
                         #region  Quit
-                        //    الخروج من البرمامج    // <<<<<<<<<<
+                        //    الخروج من البرنامج    // <<<<<<<<<<
                         case "Q":
                             Console.WriteLine("\nGoodbye!");
                             break;
