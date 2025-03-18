@@ -258,6 +258,13 @@
 
                             #region Sorting
 case "R":
+                             if (numbers.Count == 0)
+ {
+     Console.WriteLine("\n\n\n>>> []-The List Is Empty <<<\n\n");
+     break;
+ }
+ else
+ {
     Console.Write("\n\nChoose ascending or descending order (A-ASC / D-DESC) : ");
     string str = Console.ReadLine().ToUpper();
     if (str.Length == 1)
@@ -354,7 +361,7 @@ case "R":
     {
         Console.WriteLine("Enter one letter");
     }
-
+ }
     break;
 #endregion
 
